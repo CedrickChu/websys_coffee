@@ -53,7 +53,7 @@ class user {
         try {
             $sql = "SELECT * FROM users WHERE email_add = :email_add";
             $stmt = $this->db->getConnection()->prepare($sql);
-            $stmt->bindParam(':username', $email_add, PDO::PARAM_STR);
+            $stmt->bindParam(':email_add', $email_add, PDO::PARAM_STR);
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
