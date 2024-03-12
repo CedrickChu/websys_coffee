@@ -1,0 +1,109 @@
+
+.navbar{
+    padding-bottom: 150px!important;
+}
+.navbar .img{
+    height: 200px;
+}
+h1{
+    font-size: 60px!important;
+}
+h3{
+    color: rgb(66, 66, 66) !important;
+    margin: 20px 0px !important;
+}
+
+.custom-btn {
+    cursor: pointer;
+    border: 1px solid rgba(218, 36, 36, 0.6)!important;
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    color: #ffffff !important;
+    font-size: 20px!important;
+    box-shadow: 0 6px 6px rgba(218, 36, 36, 0.6);
+}
+.custom-btn:hover{
+    background-color: rgba(218, 36, 36, 0.6)!important;
+}
+.align-center{
+    width: 80%;
+    margin: auto;
+}
+.carousel img{
+    height: 600px;
+}
+.multi-item-carousel{
+    .carousel-inner{
+      > .item{
+        transition: 500ms ease-in-out left;
+      }
+      .active{
+        &.left{
+          left:-33%;
+        }
+        &.right{
+          left:33%;
+        }
+      }
+      .next{
+        left: 33%;
+      }
+      .prev{
+        left: -33%;
+      }
+      @media all and (transform-3d), (-webkit-transform-3d) {
+        > .item{
+          transition: 500ms ease-in-out left;
+          transition: 500ms ease-in-out all;
+          backface-visibility: visible;
+          transform: none!important;
+        }
+      }
+    }
+    .carouse-control{
+      &.left, &.right{
+        background-image: none;
+      }
+    }
+  }
+  
+ h4{
+    font-size: 30px!important;
+ }
+
+ .package-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    background-color: #ffffff;
+    color: #292b33;
+    padding-top: 20px;
+}
+
+.package-item img {
+    transition: .5s;
+    width: 90%;
+    margin-left: 20px;
+
+}
+
+.package-item:hover img {
+    transform: scale(1.1);
+}
+.login, .logout{
+        cursor: pointer;
+        border: 1px solid rgba(29, 79, 187, 0.6)!important;
+        background-color: transparent;
+        height: 40px;
+        margin-left:20px;
+        width: 100px;
+        color: #2544aa !important;
+        font-size: 20px!important;
+        box-shadow: 0 6px 6px rgba(29, 79, 187, 0.6);
+}
+.login:hover, .logout:hover{
+    background-color: rgba(12, 0, 179, 0.6)!important;
+    color: white !important;
+}
+.nav-link{
+    color: rgb(255, 255, 255)!important;
+}
