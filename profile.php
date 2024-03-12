@@ -3,8 +3,8 @@ include 'base.php';
 if (isset($_SESSION['username'])) {
     $username = strtoupper($_SESSION['username']);
 } else {
-    setcookie('profile_cookies', 'profile', time() + 60 * 60 * 24 * 365);
-    $_COOKIE['profile_cookies'] = 'profile';
+    setcookie('profile_cookies', $_SESSION['username'], time() + 60 * 60 * 24 * 365);
+    $_COOKIE['profile_cookies'] = $_SESSION['username'];
     header("Location: login.php");
     exit();
 }

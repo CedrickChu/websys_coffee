@@ -49,6 +49,19 @@ class user {
             throw $e;
         }
     }
+
+    public function getUserByid($id) {
+        try {
+            $sql = "SELECT * FROM users WHERE id = :id";
+            $stmt = $this->db->getConnection()->prepare($sql);
+            $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+            throw $e;
+        }
+    }
     public function getUserByEmail($email_add) {
         try {
             $sql = "SELECT * FROM users WHERE email_add = :email_add";

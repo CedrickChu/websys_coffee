@@ -1,7 +1,8 @@
 <?php
-$dataFromDataBase = "";
+$dataFromDataBase = "Hello World!";
 session_start();
 $_SESSION['data'] = $dataFromDataBase;
+echo '<script> sessionStorage.setItem("data", "' . $_SESSION['data'] . '");</script>';
 if(isset($_SESSION['data']))
     echo $_SESSION['data'];
 else

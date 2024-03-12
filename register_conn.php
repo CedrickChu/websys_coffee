@@ -33,7 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 // Create the user
                 $userId = $user->createUser($username, $password, $first_name, $last_name, $email_add, $mobile);
-
                 if ($userId) {
                     echo '<script>alert("Registration successful!"); window.location.href = "index.php";</script>';
                 } else {
@@ -43,4 +42,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-?>
+

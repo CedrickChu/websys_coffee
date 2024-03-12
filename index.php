@@ -1,6 +1,5 @@
-<?php 
+<?php
 include 'base.php';
-
 if (isset($_SESSION['username'])) {
     $greeting = strtoupper($_SESSION['username']);
 } else {
