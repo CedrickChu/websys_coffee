@@ -1,6 +1,6 @@
 <?php
-$dataFromDataBase = "Hello World!";
 session_start();
+$dataFromDataBase = $_SESSION['username'];
 $_SESSION['data'] = $dataFromDataBase;
 echo '<script> sessionStorage.setItem("data", "' . $_SESSION['data'] . '");</script>';
 if(isset($_SESSION['data']))
