@@ -16,8 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (substr($mobile, 0, 2) !== "09" || strlen($mobile) !== 11) {
         echo '<script>alert("Invalid mobile number. It should start with 09 and have 11 digits.");</script>';
     } else {
-        // Hash the password
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
 
         $database = new Database();
         $user = new User($database);
@@ -33,10 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo '<script>alert("Email is already registered. Choose a different email address.");</script>';
             } else {
                 // Create the user
-                $userId = $user->createUser($username, $hashedPassword, $first_name, $last_name, $email_add, $mobile);
+                $userId = $user->createUser($username, $password, $first_name, $last_name, $email_add, $mobile);
 
                 if ($userId) {
-                    echo '<script>alert("Registration successful!"); window.location.href = "login.php";</script>';
+                    echo '<script>alert("Registration successful!"); window.location.href = "index.php";</script>';
                 } else {
                     echo '<script>alert("Error creating user. Please try again.");</script>';
                 }
