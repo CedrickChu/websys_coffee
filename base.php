@@ -1,12 +1,10 @@
 <?php
 session_start();
-$dataFromDataBase = $_SESSION['username'];
-$_SESSION['data'] = $dataFromDataBase;
-echo '<script> sessionStorage.setItem("data", "' . $_SESSION['data'] . '");</script>';
-if(isset($_SESSION['data']))
-    echo $_SESSION['data'];
-else
-    echo "<br>False";       
+if($_SESSION)
+if (isset($_SESSION['username'])) {
+    $dataFromDataBase = $_SESSION['username'];
+    echo '<script> sessionStorage.setItem("data", "' . $dataFromDataBase . '");</script>';
+}    
 ?>
 <!doctype html>
 <html lang="en">
